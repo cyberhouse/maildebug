@@ -1,0 +1,2 @@
+# cat=basic/enable/101; type=input; label=LLL:EXT:maildebug/Resources/Private/Language/locallang.xml:extmng.addresses
+addresses =

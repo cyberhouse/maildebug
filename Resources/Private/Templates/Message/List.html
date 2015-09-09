@@ -1,0 +1,55 @@
+<f:layout name="Default" />
+
+<f:section name="content">
+
+	<table class="typo3-dblist">
+		<tr class="t3-row-header">
+			<td>{f:translate(key:'tx_maildebug_domain_model_message.date')}</td>
+			<td>{f:translate(key:'tx_maildebug_domain_model_message.subject')}</td>
+			<td> {f:translate(key:'tx_maildebug_domain_model_message.tx_maildebug_from')}</td>
+			<td> {f:translate(key:'tx_maildebug_domain_model_message.tx_maildebug_to')}</td>
+			<td> {f:translate(key:'tx_maildebug_domain_model_message.content_type')}</td>
+			<td> {f:translate(key:'tx_maildebug_domain_model_message.body')}</td>
+			<td></td>
+		</tr>
+
+		<f:for each="{messages}" as="message">
+			<tr class="db_list_normal">
+				<td>{message.date -> f:format.date(format:'d.m.Y - H:i:s')}</td>
+				<td>{message.subject}</td>
+				<td>{message.from}</td>
+				<td>{message.to}
+
+					<f:if condition="{message.cc}">
+						{f:translate(key:'tx_maildebug_domain_model_message.cc')} {message.cc}
+					</f:if>
+					<f:if condition="{message.bcc}">
+						{f:translate(key:'tx_maildebug_domain_model_message.bcc')} {message.bcc}
+					</f:if>
+				</td>
+				<td>{message.contentType}</td>
+				<td>
+					<a href="javascript:toggleEl('message-{message.uid}')">Show/Hide</a>
+
+					<div id="message-{message.uid}" style="display:none;">
+						{message.body -> f:format.nl2br()}
+					</div>
+				</td>
+				<td>
+					<f:link.action action="show" arguments="{message : message}">Details</f:link.action>
+				</td>
+			</tr>
+		</f:for>
+	</table>
+
+	<script type="text/javascript">
+		function toggleEl(obj) {
+			var el = document.getElementById(obj);
+			if (el.style.display == 'none') {
+				el.style.display = 'block';
+			} else {
+				el.style.display = 'none';
+			}
+		}
+	</script>
+</f:section>

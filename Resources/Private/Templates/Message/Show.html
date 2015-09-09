@@ -1,0 +1,42 @@
+<f:layout name="Default" />
+
+<f:section name="content">
+	<h1>Single View for Message</h1>
+
+	<table class="table typo3-dblist">
+		<tr>
+			<th>{f:translate(key:'tx_maildebug_domain_model_message.subject')}</th>
+			<td>{message.subject}</td>
+		</tr>
+		<tr>
+			<th>{f:translate(key:'tx_maildebug_domain_model_message.date')}</th>
+			<td>{message.date -> f:format.date()}</td>
+		</tr>
+		<tr>
+			<th>{f:translate(key:'tx_maildebug_domain_model_message.tx_maildebug_from')}</th>
+			<td>{message.from}</td>
+		</tr>
+		<tr>
+			<th>{f:translate(key:'tx_maildebug_domain_model_message.tx_maildebug_to')}</th>
+			<td>{message.to}</td>
+		</tr>
+		<tr>
+			<th>{f:translate(key:'tx_maildebug_domain_model_message.cc')}</th>
+			<td>{message.cc}
+			</td>
+		</tr>
+		<tr>
+			<th>{f:translate(key:'tx_maildebug_domain_model_message.bcc')}</th>
+			<td>{message.bcc}</td>
+		</tr>
+		<tr>
+			<th>{f:translate(key:'tx_maildebug_domain_model_message.content_type')}</th>
+			<td>{message.contentType}</td>
+		</tr>
+		<tr>
+			<th>{f:translate(key:'tx_maildebug_domain_model_message.body')}</th>
+			<td>{message.body}</td>
+		</tr>
+	</table>
+	<f:link.action action="list">Back to list</f:link.action>
+</f:section>

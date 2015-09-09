@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the maildebug extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="extmng.addresses">Define email addresses which still get emails:Set those email addresses which are allowed to be sent to. * is allowed as well</label>
+
+			<label index="tx_maildebug_domain_model_message">Message</label>
+			<label index="tx_maildebug_domain_model_message.subject">subject</label>
+			<label index="tx_maildebug_domain_model_message.date">date</label>
+			<label index="tx_maildebug_domain_model_message.tx_maildebug_from">from</label>
+			<label index="tx_maildebug_domain_model_message.tx_maildebug_to">to</label>
+			<label index="tx_maildebug_domain_model_message.cc">cc</label>
+			<label index="tx_maildebug_domain_model_message.bcc">bcc</label>
+			<label index="tx_maildebug_domain_model_message.content_type">contentType</label>
+			<label index="tx_maildebug_domain_model_message.body">body</label>
+		</languageKey>
+	</data>
+</T3locallang>

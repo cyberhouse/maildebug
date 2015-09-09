@@ -1,0 +1,13 @@
+{
+  "name": "cyberhouse/maildebug",
+  "license": [
+    "GPL-2.0+"
+  ],
+  "description": "Debug mails",
+  "type": "typo3-cms-extension",
+  "replace": {
+    "maildebug": "*"
+  },
+  "require": {
+  }
+}
