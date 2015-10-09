@@ -9,8 +9,6 @@ return array(
 		'label' => 'subject',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
-		'cruser_id' => 'cruser_id',
-		'delete' => 'deleted',
 		'default_sortby' => 'ORDER BY uid DESC',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('maildebug') . 'ext_icon.png'
 	),
