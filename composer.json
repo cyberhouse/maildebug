@@ -9,5 +9,10 @@
     "maildebug": "*"
   },
   "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Cyberhouse\\Maildebug\\": "Classes/"
+    }
   }
 }
